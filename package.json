@@ -1,0 +1,95 @@
+{
+  "name": "@zitadel/elysia-auth",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "A comprehensive Auth.js integration for Elysia applications with TypeScript support, plugin-based authentication, and session management",
+  "author": {
+    "name": "Mridang Agarwalla",
+    "email": "mridang@zitadel.com",
+    "url": "https://github.com/zitadel"
+  },
+  "license": "Apache-2.0",
+  "scripts": {
+    "prepack": "tsc",
+    "prepare": "npm run build",
+    "build": "tsc",
+    "test": "jest --verbose --config=jest.config.mjs --runInBand",
+    "test:watch": "npm run test -- --watch",
+    "test:debug": "jest --verbose --config=jest.config.mjs --runInBand --detectOpenHandles",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "npx eslint .",
+    "lint:fix": "npx eslint . --fix",
+    "depcheck": "npx knip",
+    "docs": "typedoc"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./adapters": {
+      "types": "./dist/adapter.d.ts"
+    }
+  },
+  "keywords": [
+    "elysia",
+    "authjs",
+    "authentication",
+    "authorization",
+    "oauth",
+    "session",
+    "jwt",
+    "typescript",
+    "plugin",
+    "security"
+  ],
+  "devDependencies": {
+    "@commitlint/config-conventional": "^20.5.0",
+    "@jest/globals": "^30.0.5",
+    "@mridang/eslint-defaults": "^1.6.3",
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^12.0.0",
+    "@semantic-release/npm": "^13.1.1",
+    "@semantic-release/release-notes-generator": "^14.1.0",
+    "@tsconfig/node22": "^22.0.2",
+    "@types/jest": "30.0.0",
+    "@types/node": "^22.18.13",
+    "eslint": "9.32.0",
+    "jest": "30.0.5",
+    "jest-junit": "^16.0.0",
+    "knip": "^5.83.0",
+    "prettier": "3.6.2",
+    "semantic-release": "^25.0.1",
+    "ts-jest": "29.4.0",
+    "typedoc": "^0.28.7",
+    "typescript": "^5.9.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zitadel/elysia-auth.git"
+  },
+  "dependencies": {
+    "@auth/core": ">=0.40.0",
+    "elysia": ">=1.2.0"
+  },
+  "peerDependencies": {
+    "@auth/core": ">=0.40.0",
+    "elysia": ">=1.2.0"
+  },
+  "private": false,
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "homepage": "https://github.com/zitadel/elysia-auth",
+  "bugs": "https://github.com/zitadel/elysia-auth/issues",
+  "publishConfig": {
+    "access": "public"
+  }
+}
