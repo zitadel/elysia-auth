@@ -1,6 +1,6 @@
 {
   "name": "@zitadel/elysia-auth",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "A comprehensive Auth.js integration for Elysia applications with TypeScript support, plugin-based authentication, and session management",
   "author": {
